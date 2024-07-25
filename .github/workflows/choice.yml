@@ -1,0 +1,15 @@
+name: Choice Input
+on:
+  workflow_dispatch:
+    inputs:
+      pokemon:
+        type: choice
+        options:
+          - Bulbasaur
+          - Charmander
+          - Squirtle
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.pokemon }}"
